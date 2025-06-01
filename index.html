@@ -28,7 +28,7 @@
 
         .header-top {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             margin-bottom: 15px;
             gap: 20px;
         }
@@ -47,6 +47,7 @@
             font-size: 12px;
             width: 180px;
             border-radius: 3px;
+            transform: translateY(-2px);
         }
 
         .search-bar:focus {
@@ -60,13 +61,13 @@
 
         nav a {
             color: #58a6ff;
-            text-decoration: underline;
+            text-decoration: none;
             margin-right: 20px;
             font-size: 14px;
         }
 
         nav a:hover {
-            color: #79c0ff;
+            text-decoration: underline;
         }
 
         h1 {
@@ -79,7 +80,6 @@
             font-size: 18px;
             font-weight: normal;
             margin: 30px 0 15px 0;
-            text-decoration: underline;
         }
 
         .latest-section {
@@ -134,6 +134,39 @@
         .timeline-content a:hover {
             text-decoration: underline;
         }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .header-top {
+                gap: 15px;
+            }
+            
+            .search-bar {
+                width: 120px;
+                font-size: 11px;
+                padding: 5px 8px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-top {
+                gap: 10px;
+            }
+            
+            .search-bar {
+                width: 100px;
+                font-size: 10px;
+                padding: 4px 6px;
+            }
+            
+            h1 {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -141,7 +174,7 @@
         <div class="header-top">
             <h1>Prakhar Mishra</h1>
             <div class="search-container">
-                <input type="text" class="search-bar" placeholder="Search website...">
+                <input type="text" class="search-bar" placeholder="Search...">
             </div>
         </div>
         <nav>
